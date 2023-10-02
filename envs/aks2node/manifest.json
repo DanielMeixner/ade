@@ -6,3 +6,19 @@ description: ...
 runner: ARM
 templatePath: azuredeploy.json
 
+parameters: 
+- id: "dnsPrefix"
+  name: "DNS Prefix"
+  type: "string"
+  required: true
+
+- id: "linuxAdminUsername "
+  name: "Linux Admin Username"
+  type: "string"
+  required: true
+
+- id: "sshRSAPublicKey"
+  name: "sshRSAPublicKey - Copy and paste the public part of your SSH key pair (by default, the contents of ~/.ssh/id_rsa.pub)."
+  type: "string"
+  required: true
+  
