@@ -17,11 +17,11 @@ parameters:
   required: true
 - id: "osDiskSizeGB"
   name: "OS Disk Size GB"
-  type: "int"
+  type: "number"
   required: true
 - id: "agentCount"
   name: "Agent Count"
-  type: "int"
+  type: "number"
   required: true
 - id: "agentVMSize"
   name: "Agent VM Size"
