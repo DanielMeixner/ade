@@ -7,26 +7,30 @@ runner: ARM
 templatePath: azuredeploy.json
 
 parameters: 
-- id: "clusterName"
-  name: "Cluster Name"
-  type: "string"
-  required: true
-- id: "location"
-  name: "Location"
-  type: "string"
-  required: true
-- id: "osDiskSizeGB"
-  name: "OS Disk Size GB"
-  type: "number"
-  required: true
-- id: "agentCount"
-  name: "Agent Count"
-  type: "number"
-  required: true
-- id: "agentVMSize"
-  name: "Agent VM Size"
-  type: "string"
-  required: true
+# - id: "clusterName"
+#   name: "Cluster Name"  
+#   type: "string"
+#   required: true
+# - id: "location"
+#   name: "Location"
+#   type: "string"
+#   required: true
+# - id: "osDiskSizeGB"
+#   name: "OS Disk Size GB"
+#   type: "number"
+#   required: true
+# - id: "agentCount"
+#   name: "Agent Count"
+#   type: "number"
+#   required: true
+# - id: "agentVMSize"
+#   name: "Agent VM Size"
+#   type: "string"
+#   required: true
+# - id: "servicePrincipalClientId"
+#   name: "Service Principal Client Id"
+#   type: "
+#   required: true
 
 - id: "dnsPrefix"
   name: "DNS Prefix"
