@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=https://github.com/Azure/deployment-environments/releases/download/2022-11-11-preview/manifest.schema.json
+
+name: SampleDatabase
+version: 1.0.0
+summary: Sample Azure SQL database
+description: Deploys an Azure SQL database pre-filled with the AdventureWorks dataset
+
+runner: ARM
+templatePath: azuredeploy.json
+
+parameters: 
+- id: "DatabaseUsername"
+  name: "Database Username"
+  type: "string"
+  required: true
+
+- id: "DatabasePassword"
+  name: "Database Password"
+  type: "string"
+  required: true
+
+- id: "DatabaseSample"
+  name: "Database Sample"
+  type: "string"
+  required: true
+  allowed:
+    - AdventureWorksLT
+    - WideWorldImportersFull
+    - WideWorldImportersStd
