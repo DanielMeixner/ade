@@ -33,7 +33,7 @@ parameters:
   type: "string"
   required: true
 
-- id: "linuxAdminUsername "
+- id: "linuxAdminUsername"
   name: "Linux Admin Username"
   type: "string"
   required: true
