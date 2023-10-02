@@ -1,0 +1,31 @@
+name: TRANSPILE
+
+on:
+  push:
+    branches: [ "main" ]
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  transpile:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install BICEP
+        uses: anthony-c-martin/setup-bicep@v0.1
+
+      - name: Transpile Templates & Mark Script as Executable
+        run: chmod +x ./transpile.sh && ./transpile.sh
+
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'Transpiled BICEP to ARM'
