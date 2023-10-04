@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=https://github.com/Azure/deployment-environments/releases/download/2022-11-11-preview/manifest.schema.json
+name: akshybrid4node2win2linux
+version: 1.0.0
+summary: An AKS made of 2 linux nodes and 2 Windows nodes.
+description: ...
+runner: ARM
+templatePath: azuredeploy.json
+
+parameters: 
+# - id: "clusterName"
+#   name: "Cluster Name"  
+#   type: "string"
+#   required: true
+# - id: "location"
+#   name: "Location"
+#   type: "string"
+#   required: true
+# - id: "osDiskSizeGB"
+#   name: "OS Disk Size GB"
+#   type: "number"
+#   required: true
+# - id: "agentCount"
+#   name: "Agent Count"
+#   type: "number"
+#   required: true
+# - id: "agentVMSize"
+#   name: "Agent VM Size"
+#   type: "string"
+#   required: true
+# - id: "servicePrincipalClientId"
+#   name: "Service Principal Client Id"
+#   type: "
+#   required: true
+
+- id: "dnsPrefix"
+  name: "DNS Prefix"
+  type: "string"
+  required: true
+
+- id: "linuxAdminUsername"
+  name: "Linux Admin Username"
+  type: "string"
+  required: true
+
+- id: "sshRSAPublicKey"
+  name: "sshRSAPublicKey - Copy and paste the public part of your SSH key pair (by default, the contents of ~/.ssh/id_rsa.pub)."
+  type: "string"
+  required: true
+  
